@@ -25,13 +25,13 @@ This program, `sickbot.py`, is a Python script designed to automate the process 
 To customize the excuses and the absence letter, follow these steps:
 
 1. **Excuses:**
-    - Open the Python script (`email_send.py`) in a text editor.
+    - Open the Python script (`sickbot.py`) in a text editor.
     - Locate the `random_excuse` variable assignment.
     - Modify the list of excuses according to your preference.
     - Save the changes.
 
 2. **Letter:**
-    - Open the Python script (`email_send.py`) in a text editor.
+    - Open the Python script (`sickbot.py`) in a text editor.
     - Locate the `letter` variable assignment.
     - Modify the content of the absence letter as needed.
     - Save the changes.
