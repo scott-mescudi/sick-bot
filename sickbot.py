@@ -5,8 +5,9 @@ import time
 import sys
 
 ###########################################################
-target_hour = 18                                         #
-target_minute = 26                                      #
+target_hour = int(input("Enter the hour: "))                                 
+target_minute = int(input("Enter the minute: "))
+print("alarm will go off at ", target_hour,":",target_minute)                                     
 ########################################################
 
 def sender():
@@ -48,7 +49,7 @@ subject = 'Afwezigheid'
 body = letter
 
 message = f'Subject: {subject}\n\n{body}'
-
+print ("Goodnight...")
 while True:
     local_time = datetime.datetime.now()
     if local_time.hour == target_hour and local_time.minute == target_minute:
@@ -56,3 +57,4 @@ while True:
         time.sleep(1200)
         sender()
         sys.exit()
+
