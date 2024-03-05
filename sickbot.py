@@ -55,6 +55,7 @@ while True:
     if local_time.hour == target_hour and local_time.minute == target_minute:
         print("You have 20 minutes to close the program or the email will send (press ctrl + c to close)")
         time.sleep(1200)
+        print("email sent successfully")
         sender()
         sys.exit()
 
