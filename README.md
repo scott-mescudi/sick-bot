@@ -33,7 +33,8 @@ To use the `sickbot.py` script effectively, you'll need to set up an SMTP server
 
 Here's a video tutorial that demonstrates how to set up an SMTP server using Gmail:
 
-[![Setting Up SMTP Server with Gmail](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)]([https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=1YXVdyVuFGA&t=116s))
+[![Setting Up SMTP Server with Gmail](https://img.youtube.com/vi/kTcmbZqNiGw/0.jpg)](https://www.youtube.com/watch?v=kTcmbZqNiGw&t=235s)
+
 
 You can follow along with this video to configure your SMTP server with Gmail. Once set up, make sure to update the `smtp_server`, `smtp_port`, `smtp_username`, and `smtp_password` variables in the `sickbot.py` script accordingly.
 
