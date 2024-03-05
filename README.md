@@ -19,6 +19,23 @@ This program, `sickbot.py`, is a Python script designed to automate the process 
 - The script uses SMTP (Simple Mail Transfer Protocol) for sending emails.
 - It utilizes the `smtplib` library for SMTP functionality.
 - The script includes an infinite loop that constantly checks the current time. When the specified time (`target_hour` and `target_minute`) is reached, it prompts the user to close the program within 20 minutes to prevent sending the email.
+## Customizing Excuses and Letter
+
+## To customize the excuses and the absence letter, follow these steps:
+
+1. **Excuses:**
+    - Open the Python script (`email_send.py`) in a text editor.
+    - Locate the `random_excuse` variable assignment.
+    - Modify the list of excuses according to your preference.
+    - Save the changes.
+
+2. **Letter:**
+    - Open the Python script (`email_send.py`) in a text editor.
+    - Locate the `letter` variable assignment.
+    - Modify the content of the absence letter as needed.
+    - Save the changes.
+
+Remember to keep the structure of the code intact while making modifications. Ensure that the email content is appropriate and professional.
 
 ## Important Note
 
