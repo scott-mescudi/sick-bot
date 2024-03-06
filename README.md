@@ -19,30 +19,36 @@ This program, `sickbot.py`, is a Python script designed to automate the process 
 - The script uses SMTP (Simple Mail Transfer Protocol) for sending emails.
 - It utilizes the `smtplib` library for SMTP functionality.
 - The script includes an infinite loop that constantly checks the current time. When the specified time (`target_hour` and `target_minute`) is reached, it prompts the user to close the program within 20 minutes to prevent sending the email.
+- When the alarm goes off, it plays a custom audio file.
 
-## Customizing Excuses and Letter
+## Customizing Excuses, Letter, and Audio
 
-To customize the excuses and the absence letter, follow these steps:
+To customize the excuses, the absence letter, and the audio file, follow these steps:
 
-1. **Excuses:**
+1. **Excuses**:
     - Open the Python script (`sickbot.py`) in a text editor.
     - Locate the `random_excuse` variable assignment.
     - Modify the list of excuses according to your preference.
     - Save the changes.
 
-2. **Letter:**
+2. **Letter**:
     - Open the Python script (`sickbot.py`) in a text editor.
     - Locate the `letter` variable assignment.
     - Modify the content of the absence letter as needed.
     - Save the changes.
+
+3. **Audio File**:
+    - Replace the existing audio file path with your custom audio file path in the `play_audio_file` function call.
+    - Ensure that the custom audio file is accessible at the specified path.
 
 Remember to keep the structure of the code intact while making modifications. Ensure that the email content is appropriate and professional.
 
 ## Important Note
 
 - **Security**: Be cautious with the usage of this script, especially regarding sensitive information such as SMTP credentials.
-- **Customization**: Feel free to customize the email template, excuses, and scheduling parameters to fit your specific requirements.
+- **Customization**: Feel free to customize the email template, excuses, absence letter, and audio file to fit your specific requirements.
 - **Error Handling**: Ensure proper error handling mechanisms are in place, especially for SMTP operations to handle network errors or authentication failures.
+
 ### Setting Up SMTP Server
 
 To use the `sickbot.py` script effectively, you'll need to set up an SMTP server. Below is a step-by-step guide on how to set up an SMTP server using Gmail as an example.
@@ -52,7 +58,6 @@ To use the `sickbot.py` script effectively, you'll need to set up an SMTP server
 Here's a video tutorial that demonstrates how to set up an SMTP server using Gmail:
 
 [![Setting Up SMTP Server with Gmail](https://img.youtube.com/vi/kTcmbZqNiGw/0.jpg)](https://www.youtube.com/watch?v=kTcmbZqNiGw&t=235s)
-
 
 You can follow along with this video to configure your SMTP server with Gmail. Once set up, make sure to update the `smtp_server`, `smtp_port`, `smtp_username`, and `smtp_password` variables in the `sickbot.py` script accordingly.
 
