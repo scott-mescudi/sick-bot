@@ -1,0 +1,9 @@
+{
+    "smtp_server": "your_smtp_server",
+    "smtp_port": 587,
+    "smtp_username": "your_smtp_username",
+    "smtp_password": "your_smtp_password",
+    "from_email": "your_from_email",
+    "to_email": "recipient_email",
+    "audio_file_path": "/path/to/audio/file.wav"
+}
