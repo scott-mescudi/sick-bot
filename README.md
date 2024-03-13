@@ -1,57 +1,42 @@
-# SickBot
+# SickBot - Automatic Absence Notification System
 
-This program, `sickbot.py`, is a Python script designed to automate the process of sending an email notification to inform about absence due to sickness. The program selects a random excuse from a predefined list and crafts an email accordingly. It also includes a scheduler to send the email at a specified time.
+SickBot is a Python program that automates the process of sending absence notifications to a predefined recipient via email at a specified time. It can be utilized for various purposes such as notifying teachers or employers about unexpected absences.
 
-## How to Use
+## Installation and Setup
 
-1. **Configure SMTP Settings**: Before using this program, make sure to configure the SMTP settings including the SMTP server, port, username, and password.
+1. **Python Installation**: Ensure you have Python installed on your system. This program is compatible with Python 3.x.
 
-2. **Email Recipient**: Update the `to_email` variable to specify the recipient's email address.
+2. **Dependencies Installation**: Install the required dependencies using pip. You can install them via the following command:
+    ```bash
+    pip install pygame colorama
+    ```
 
-3. **Run the Script**: Execute the script either by running it locally or deploying it to a server.
+3. **Configuration Setup**: Edit the `config.json` file to configure your SMTP server details and email credentials. The configuration file includes the following parameters:
+   - `smtp_server`: SMTP server address.
+   - `smtp_port`: Port number of the SMTP server.
+   - `smtp_username`: Username for SMTP authentication.
+   - `smtp_password`: Password for SMTP authentication.
+   - `from_email`: Sender's email address.
+   - `to_email`: Recipient's email address.
+   - `audio_file_path`: Path to the audio file to be played as an alarm.
 
-4. **Scheduled Email**: The script is set to send the email at a specific time (defined by `target_hour` and `target_minute` variables). You have 20 minutes to close the program after it prompts you.
+## Usage
 
-## Program Explanation
+1. **Run the Program**: Execute the program by running the Python script `sickbot.py`.
 
-- The program randomly selects an excuse from a list of predefined excuses.
-- It crafts an email template with the selected excuse and sends it to the specified recipient.
-- The script uses SMTP (Simple Mail Transfer Protocol) for sending emails.
-- It utilizes the `smtplib` library for SMTP functionality.
-- The script includes an infinite loop that constantly checks the current time. When the specified time (`target_hour` and `target_minute`) is reached, it prompts the user to close the program within 20 minutes to prevent sending the email.
-- When the alarm goes off, it plays a custom audio file.
+2. **Set Alarm Time**: Enter the desired hour and minute when you want the alarm/notification to trigger. The program will wait until the specified time to execute further actions.
 
-## Customizing Excuses, Letter, and Audio
+3. **Notification Process**: At the specified time, the program will play an alarm sound and prompt you to take action:
+   - You have a set duration (randomly generated between 2 to 120 minutes) to close the program to cancel the email notification.
+   - If no action is taken within the specified duration, an email will be automatically sent to the recipient with a predefined absence notification message.
 
-To customize the excuses, the absence letter, and the audio file, follow these steps:
+4. **Cancel Notification**: To cancel the email notification, simply close the program using `Ctrl + C` before the countdown timer ends.
 
-1. **Excuses**:
-    - Open the Python script (`sickbot.py`) in a text editor.
-    - Locate the `random_excuse` variable assignment.
-    - Modify the list of excuses according to your preference.
-    - Save the changes.
+## Important Notes
 
-2. **Letter**:
-    - Open the Python script (`sickbot.py`) in a text editor.
-    - Locate the `letter` variable assignment.
-    - Modify the content of the absence letter as needed.
-    - Save the changes.
-
-3. **Audio File**:
-    - Replace the existing audio file path with your custom audio file path in the `play_audio_file` function call.
-    - Ensure that the custom audio file is accessible at the specified path.
-
-Remember to keep the structure of the code intact while making modifications. Ensure that the email content is appropriate and professional.
-
-## Important Note
-
-- **Security**: Be cautious with the usage of this script, especially regarding sensitive information such as SMTP credentials.
-- **Customization**: Feel free to customize the email template, excuses, absence letter, and audio file to fit your specific requirements.
-- **Error Handling**: Ensure proper error handling mechanisms are in place, especially for SMTP operations to handle network errors or authentication failures.
-
-### Setting Up SMTP Server
-
-To use the `sickbot.py` script effectively, you'll need to set up an SMTP server. Below is a step-by-step guide on how to set up an SMTP server using Gmail as an example.
+- Ensure that your SMTP server allows access from less secure apps or provides an application-specific password if required.
+- Customize the absence notification message (`letter` variable in the script) according to your requirements.
+- Test the program with caution, especially when dealing with real email addresses and SMTP credentials.
 
 #### Video Tutorial: Setting Up SMTP Server with Gmail
 
