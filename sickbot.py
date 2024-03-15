@@ -44,7 +44,7 @@ random_excuse = random.choice([
 ])
 
 letter = f'''
-Betreft: Ziektemelding
+Betreft: Afwezigheid
 
 Geachte docent,
 
@@ -53,6 +53,34 @@ Hierbij wil ik u laten weten dat ik vandaag niet in staat ben om naar school te 
 Ik beloof om zo snel mogelijk een medische verklaring van mijn huisarts te verkrijgen en deze naar school te sturen. Mocht er nog schoolwerk zijn dat ik thuis kan doen, dan zal ik mijn best doen om dat zo spoedig mogelijk af te handelen.
 
 Mijn oprechte excuses voor het ongemak dat dit kan veroorzaken. Ik hoop snel weer hersteld te zijn en mijn studie ononderbroken voort te kunnen zetten.
+
+Met vriendelijke groet,
+'''
+
+letter3 = f'''
+Betreft: Afwezigheid
+
+Geachte docent,
+
+Met spijt moet ik u informeren dat ik vandaag niet aanwezig kan zijn op school want {random_excuse}. Ik hoop dat u mijn situatie begrijpt en mijn afwezigheid kunt accepteren.
+
+Ik zal mijn best doen om eventuele gemiste lessen in te halen en ervoor te zorgen dat ik weer op schema kom met mijn studie. Als er specifieke taken zijn die ik thuis kan voltooien, laat het me dan alstublieft weten.
+
+Mijn excuses voor het eventuele ongemak dat dit kan veroorzaken. Ik hoop snel weer terug te zijn op school en mijn studie voort te zetten.
+
+Met vriendelijke groet,
+'''
+
+letter4 = f'''
+Betreft: Afwezigheid 
+
+Geachte docent,
+
+Helaas kan ik vandaag niet aanwezig zijn op school want {random_excuse}. Hierdoor ben ik niet in staat om naar school te komen. Ik bied mijn excuses aan voor eventuele ongemakken die hierdoor kunnen ontstaan.
+
+Ik zal proberen om zoveel mogelijk van het gemiste werk in te halen en ervoor te zorgen dat ik weer op schema kom met mijn studie. Als er specifieke taken zijn die ik thuis kan doen, laat het me dan alstublieft weten.
+
+Nogmaals mijn excuses voor het ongemak. Ik hoop snel de nodige oplossingen te vinden en mijn studie ononderbroken voort te zetten.
 
 Met vriendelijke groet,
 '''
@@ -72,7 +100,7 @@ audio_file_path = config['audio_file_path']
 a = random.randint(120, 7200)
 
 subject = 'Afwezigheid'
-body = letter
+body = random.choice([letter, letter3, letter4])
 message = f'Subject: {subject}\n\n{body}'
 
 print("Goodnight...")
