@@ -10,7 +10,7 @@ import json
 
 init(autoreset=True)
 
-def read_config(filename='config.json'):
+def read_config(filename='/media/astr0/COCK/sick_email_bot/config.json'):
     with open(filename) as f:
         config = json.load(f)
     return config
@@ -62,7 +62,7 @@ Betreft: Afwezigheid
 
 Geachte docent,
 
-Met spijt moet ik u informeren dat ik vandaag niet aanwezig kan zijn op school want {random_excuse}. Ik hoop dat u mijn situatie begrijpt en mijn afwezigheid kunt accepteren.
+Met spijt moet ik u informeren dat ik vandaag niet aanwezig kan zijn op school want {random_excuse} Ik hoop dat u mijn situatie begrijpt en mijn afwezigheid kunt accepteren.
 
 Ik zal mijn best doen om eventuele gemiste lessen in te halen en ervoor te zorgen dat ik weer op schema kom met mijn studie. Als er specifieke taken zijn die ik thuis kan voltooien, laat het me dan alstublieft weten.
 
@@ -76,7 +76,7 @@ Betreft: Afwezigheid
 
 Geachte docent,
 
-Helaas kan ik vandaag niet aanwezig zijn op school want {random_excuse}. Hierdoor ben ik niet in staat om naar school te komen. Ik bied mijn excuses aan voor eventuele ongemakken die hierdoor kunnen ontstaan.
+Helaas kan ik vandaag niet aanwezig zijn op school want {random_excuse} Hierdoor ben ik niet in staat om naar school te komen. Ik bied mijn excuses aan voor eventuele ongemakken die hierdoor kunnen ontstaan.
 
 Ik zal proberen om zoveel mogelijk van het gemiste werk in te halen en ervoor te zorgen dat ik weer op schema kom met mijn studie. Als er specifieke taken zijn die ik thuis kan doen, laat het me dan alstublieft weten.
 
