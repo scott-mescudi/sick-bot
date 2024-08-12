@@ -1,3 +1,5 @@
+#this was one of my first projects (3 weeks in) so if its bad my apologies in advance
+
 import smtplib
 import random 
 import datetime
@@ -113,3 +115,5 @@ while True:
         time.sleep(a)
         sender()
         sys.exit()
+
+
