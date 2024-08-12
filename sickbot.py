@@ -10,7 +10,7 @@ import json
 
 init(autoreset=True)
 
-def read_config(filename='/media/astr0/COCK/sick_email_bot/config.json'):
+def read_config(filename='<enter path to config here>'):
     with open(filename) as f:
         config = json.load(f)
     return config
